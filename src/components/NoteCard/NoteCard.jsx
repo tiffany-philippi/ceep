@@ -6,9 +6,9 @@ class NoteCard extends Component {
     return (
       <section className="note_card_section">
         <header className="note_card_header">
-          <h1 className="note_card_title">Title</h1>
+          <h1 className="note_card_title">{this.props.note.title}</h1>
         </header>
-        <p className="note_card_text">Write your note.</p>
+        <p className="note_card_text">{this.props.note.note}</p>
       </section>
     );
   }
