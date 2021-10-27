@@ -10,7 +10,7 @@ class App extends Component {
     super();
     this.state = {
       notes: [], 
-      categories: []
+      categories: ['Reminder', 'Grocery Store']
     }
     
   }
@@ -26,7 +26,6 @@ class App extends Component {
   deleteNote(index) {
     let noteState = this.state.notes;
     noteState.splice(index, 1);
-    console.log(noteState);
     this.setState({notes: noteState});
   }
 
@@ -47,10 +46,18 @@ class App extends Component {
           <h1>My notes</h1>
         </header>
         <div className="content">
-          <NoteCreateForm categories={this.state.categories} createNote={this.createNoteSubmit.bind(this)}/>
+          <NoteCreateForm 
+          categories={this.state.categories} 
+          createNote={this.createNoteSubmit.bind(this)}/>
+
           <main className="main_content">
-            <CategoryList newCategory={this.newCategory.bind(this)} categories={this.state.categories}/>
-            <NotesList deleteNote={this.deleteNote.bind(this)} notes={this.state.notes}/>
+            <CategoryList 
+              newCategory={this.newCategory.bind(this)} 
+              categories={this.state.categories}/>
+
+            <NotesList 
+              deleteNote={this.deleteNote.bind(this)} 
+              notes={this.state.notes}/>
           </main>
         </div>
       </div>

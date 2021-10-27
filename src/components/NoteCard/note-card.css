@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  background-color: #ffeec2;
+  background-color: #c3b9c7;
   border-radius: 4px;
   flex-wrap: wrap;
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
@@ -11,7 +11,13 @@
   margin: 0 10px;
 }
 
-.note_card_section .note_card_header {
+.note_card_section .note_card_header_content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.note_card_section .note_card_header_content .note_card_header {
   display: flex;
   justify-content: space-between;
   width: 100%;
@@ -19,9 +25,13 @@
 
 .note_card_section .note_card_header .note_card_title {
   margin: 0;
-  font-size: 1.2em;
+  font-size: 24px;
 }
 
+.note_card_section .note_card_category {
+  font-size: 12px;
+  font-style: italic;
+}
 .note_card_section .note_card_text {
   margin: 8px 0 0 0;
   font-size: 16px;
