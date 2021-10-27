@@ -1,0 +1,16 @@
+.notes_list {
+  background-color: #fff;
+  flex-grow: 3;
+  display: grid;
+  grid-template-columns: auto;
+  list-style-type: none;
+  padding-left: 24px;
+  padding-top: 24px;
+}
+
+.notes_list_item {
+  margin: 12px;
+  max-width: 240px;
+  max-height: 4000px;
+  display: inline;
+}

@@ -1,13 +1,17 @@
+import { Component } from "react";
 import NoteCreateForm from "./components/NoteCreateForm";
 import NotesList from "./components/NotesList";
+import "./app.css"
 
-function App() {
-  return (
-    <div>
-      <NoteCreateForm/>
-      <NotesList/>      
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="content">
+        <NoteCreateForm />
+        <NotesList />
+      </div>
+    );
+  }
 }
 
 export default App;
