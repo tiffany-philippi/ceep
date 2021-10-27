@@ -47,7 +47,7 @@ class App extends Component {
           <h1>My notes</h1>
         </header>
         <div className="content">
-          <NoteCreateForm createNote={this.createNoteSubmit.bind(this)}/>
+          <NoteCreateForm categories={this.state.categories} createNote={this.createNoteSubmit.bind(this)}/>
           <main className="main_content">
             <CategoryList newCategory={this.newCategory.bind(this)} categories={this.state.categories}/>
             <NotesList deleteNote={this.deleteNote.bind(this)} notes={this.state.notes}/>
