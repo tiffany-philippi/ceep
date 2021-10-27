@@ -2,6 +2,7 @@ import { Component } from "react";
 import NoteCreateForm from "./components/NoteCreateForm";
 import NotesList from "./components/NotesList";
 import "./app.css"
+import { ReactComponent as LightbulbSVG } from "./assets/images/lightbulb.svg"
 
 class App extends Component {
   constructor() {
@@ -26,9 +27,15 @@ class App extends Component {
   }
   render() {
     return (
-      <div className="content">
-        <NoteCreateForm createNote={this.createNoteSubmit.bind(this)}/>
-        <NotesList deleteNote={this.deleteNote.bind(this)} notes={this.state.notes}/>
+      <div>
+        <header className="header_content">
+          <LightbulbSVG/>
+          <h1>My notes</h1>
+        </header>
+        <div className="content">
+          <NoteCreateForm createNote={this.createNoteSubmit.bind(this)}/>
+          <NotesList deleteNote={this.deleteNote.bind(this)} notes={this.state.notes}/>
+        </div>
       </div>
     );
   }

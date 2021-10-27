@@ -27,11 +27,14 @@ class NoteCreateForm extends Component {
 
   render() {
     return (
-      <form className="note_create_form" onSubmit={this._createNote.bind(this)}>
-        <input type="text" placeholder="Title" className="input_style" onChange={this._handleTitleChanging.bind(this)}/>
-        <textarea rows="15" type="text" placeholder="Write your note..." className="input_style" onChange={this._handleNoteChanging.bind(this)}></textarea>
-        <button className="note_create_button">Create note</button>
-      </form>
+      <div className="note_create_content">
+        <h2>Create a new note</h2>
+        <form className="note_create_form" onSubmit={this._createNote.bind(this)}>
+          <input type="text" placeholder="Title" className="input_style" onChange={this._handleTitleChanging.bind(this)}/>
+          <textarea rows="15" type="text" placeholder="Write your note..." className="input_style" onChange={this._handleNoteChanging.bind(this)}></textarea>
+          <button className="note_create_button">Create note</button>
+        </form>
+      </div>
     );
   }
 }

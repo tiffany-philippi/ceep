@@ -1,11 +1,22 @@
-.notes_list {
-  background-color: #fff;
+.notes_list_content {
   flex-grow: 3;
+}
+
+
+.notes_list_content h2 {
+  margin-left: 12px;
+  padding-top: 24px;
+  margin-top: 8px;
+  padding-left: 24px;
+}
+
+.notes_list {
   display: grid;
+  background-color: #fff;
   grid-template-columns: auto auto auto auto;
   list-style-type: none;
-  padding-left: 24px;
-  padding-top: 24px;
+  margin-top: -10px;
+  padding-left: 15px;
 }
 
 .notes_list_item {
