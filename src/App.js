@@ -3,21 +3,25 @@ import NoteCreateForm from "./components/NoteCreateForm";
 import NotesList from "./components/NotesList";
 import "./app.css"
 import { ReactComponent as LightbulbSVG } from "./assets/images/lightbulb.svg"
+import CategoryList from "./components/CategoryList";
 
 class App extends Component {
   constructor() {
     super();
-    this.notesList = [];
-    this.state = {notes: this.notesList}
+    this.state = {
+      notes: [], 
+      categories: []
+    }
     
   }
+
   createNoteSubmit(note) {
     this.setState({
       notes: [
         ...this.state.notes,
         note
       ]
-    })
+    });
   }
   deleteNote(index) {
     let noteState = this.state.notes;
@@ -25,6 +29,16 @@ class App extends Component {
     console.log(noteState);
     this.setState({notes: noteState});
   }
+
+  newCategory(category) {
+    this.setState({
+      categories: [
+        ...this.state.categories,
+        category
+      ]
+    })
+  }
+
   render() {
     return (
       <div>
@@ -34,7 +48,10 @@ class App extends Component {
         </header>
         <div className="content">
           <NoteCreateForm createNote={this.createNoteSubmit.bind(this)}/>
-          <NotesList deleteNote={this.deleteNote.bind(this)} notes={this.state.notes}/>
+          <main className="main_content">
+            <CategoryList newCategory={this.newCategory.bind(this)} categories={this.state.categories}/>
+            <NotesList deleteNote={this.deleteNote.bind(this)} notes={this.state.notes}/>
+          </main>
         </div>
       </div>
     );

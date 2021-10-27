@@ -1,6 +1,9 @@
 .content {
   display: flex;
 }
+.main_content {
+  flex-grow: 3;
+}
 .header_content {
   display: flex;
   align-items: center;
