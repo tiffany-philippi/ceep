@@ -11,6 +11,12 @@
   margin: 0 10px;
 }
 
+.note_card_section .note_card_header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
 .note_card_section .note_card_header .note_card_title {
   margin: 0;
   font-size: 1.2em;
